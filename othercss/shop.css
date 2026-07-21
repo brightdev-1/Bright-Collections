@@ -1,0 +1,309 @@
+/* ==========================
+   SHOP HERO
+========================== */
+
+.shop-hero{
+
+    background:linear-gradient(120deg, var(--color-dark), var(--color-gray));
+    color:white;
+
+    padding:70px 5% 60px;
+    text-align:center;
+
+    animation:fadeUp .7s ease both;
+
+}
+
+
+.shop-hero-eyebrow{
+
+    display:inline-block;
+
+    color:var(--color-gold);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:13px;
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+
+.shop-hero h1{
+
+    font-size:clamp(28px, 4vw, 44px);
+    margin-bottom:12px;
+
+}
+
+
+.shop-hero p{
+
+    color:#ddd;
+
+}
+
+
+
+/* ==========================
+   TOOLBAR
+========================== */
+
+.shop{
+
+    padding:50px 5% 70px;
+
+}
+
+
+.shop-toolbar{
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    margin-bottom:10px;
+
+}
+
+
+.filter-tabs{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+}
+
+
+.filter-tab{
+
+    position:relative;
+
+    padding:10px 22px;
+
+    border:2px solid transparent;
+    border-radius:var(--radius-lg);
+
+    background:white;
+    color:var(--color-text);
+
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+
+.filter-tab:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+.filter-tab.is-active{
+
+    background:var(--color-dark);
+    color:var(--color-gold);
+    border-color:var(--color-gold);
+
+}
+
+
+.sort-box select{
+
+    padding:10px 16px;
+
+    border:2px solid #e2e2e2;
+    border-radius:var(--radius-lg);
+
+    background:white;
+    color:var(--color-text);
+
+    font-weight:500;
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+
+.sort-box select:hover{
+
+    border-color:var(--color-gold);
+
+}
+
+
+.results-count{
+
+    margin:15px 0 30px;
+
+    color:#777;
+    font-size:14px;
+
+}
+
+
+
+/* ==========================
+   PRODUCT GRID EXTRAS
+========================== */
+
+.product-card{
+
+    position:relative;
+
+    opacity:0;
+    transform:translateY(24px) scale(.97);
+
+}
+
+
+.product-card.is-visible{
+
+    animation:fadeUp .6s ease forwards;
+
+}
+
+
+.product-card.is-hidden{
+
+    display:none;
+
+}
+
+
+.badge{
+
+    position:absolute;
+
+    top:14px;
+    left:14px;
+
+    background:var(--color-gold);
+    color:var(--color-dark);
+
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+
+    padding:5px 12px;
+    border-radius:20px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+
+    z-index:2;
+
+}
+
+
+.product-card button{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+.product-card button::after{
+
+    content:"Added ✓";
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:var(--color-gold);
+    color:var(--color-dark);
+
+    opacity:0;
+    transform:translateY(100%);
+
+    transition:var(--transition);
+
+}
+
+
+.product-card button.is-added::after{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+
+.empty-state{
+
+    text-align:center;
+
+    padding:40px 0;
+    color:#888;
+
+}
+
+
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(24px) scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+    .product-card{
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:600px){
+
+    .shop-toolbar{
+
+        flex-direction:column;
+        align-items:stretch;
+
+    }
+
+
+    .sort-box select{
+
+        width:100%;
+
+    }
+
+}
