@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BRIGHT-COLLECTIONS — premium footwear, men's fashion wear and luxury wristwatches for the modern gentleman.">
+  <meta name="description"
+    content="BRIGHT-COLLECTIONS — premium footwear, men's fashion wear and luxury wristwatches for the modern gentleman.">
   <meta name="theme-color" content="#000000">
 
   <title>BRIGHT-COLLECTIONS | Premium Fashion Store</title>
@@ -27,7 +28,7 @@
   <header class="header">
 
     <a href="./index.html" class="logo-area" aria-label="BRIGHT-COLLECTIONS home">
-      <img src="./pictures/bright collection logo.png" alt="Bright Collections Logo" class="logo">
+      <img src="./pictures/bright-collection-logo.png" alt="Bright Collections Logo" class="logo">
       <h2>BRIGHT-COLLECTIONS</h2>
     </a>
 
@@ -40,7 +41,7 @@
     <nav id="primary-nav">
       <a href="./index.html">Home</a>
       <a href="./otherhtml/shop.html">Shop</a>
-      <a href="./otherhtml/cart.html">Cart 🛒</a>
+      <a href="./otherhtml/cart.html">Cart 🛒 <span id="cart-count">0</span></a>
       <a href="./otherhtml/about.html">About</a>
       <a href="./otherhtml/contact.html">Contact</a>
     </nav>
@@ -87,7 +88,7 @@
       </div>
 
       <div class="hero-image">
-        <img src="images/banner.jpg" alt="Bright Collections Products" fetchpriority="high">
+        <img src="./pictures/WhatsApp_Image_2026-07-22_at_8.56.00_AM-removebg-preview.png" alt="" fetchpriority="high">
       </div>
 
     </section>
@@ -136,21 +137,36 @@
           <img src="images/product1.jpg" alt="Classic Sneakers" loading="lazy" decoding="async">
           <h3>Classic Sneakers</h3>
           <p>₦25,000</p>
-          <button type="button">Add To Cart</button>
+          <button type="button" class="add-to-cart-btn"
+            data-id="classic-sneakers"
+            data-name="Classic Sneakers"
+            data-price="25000"
+            data-image="images/product1.jpg"
+            data-stock="8">Add To Cart</button>
         </div>
 
         <div class="product-card">
           <img src="images/product2.jpg" alt="Premium Shirt" loading="lazy" decoding="async">
           <h3>Premium Shirt</h3>
           <p>₦15,000</p>
-          <button type="button">Add To Cart</button>
+          <button type="button" class="add-to-cart-btn"
+            data-id="premium-shirt"
+            data-name="Premium Shirt"
+            data-price="15000"
+            data-image="images/product2.jpg"
+            data-stock="15">Add To Cart</button>
         </div>
 
         <div class="product-card">
           <img src="images/product3.jpg" alt="Luxury Watch" loading="lazy" decoding="async">
           <h3>Luxury Watch</h3>
           <p>₦35,000</p>
-          <button type="button">Add To Cart</button>
+          <button type="button" class="add-to-cart-btn"
+            data-id="luxury-watch"
+            data-name="Luxury Watch"
+            data-price="35000"
+            data-image="images/product3.jpg"
+            data-stock="5">Add To Cart</button>
         </div>
 
       </div>
@@ -193,7 +209,9 @@
 
   </footer>
 
+  <script src="./otherJavascript/cart.js" defer></script>
   <script src="./bright.js" defer></script>
 
 </body>
+
 </html>

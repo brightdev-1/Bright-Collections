@@ -98,23 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ADD TO CART FEEDBACK
-
-  cards.forEach(card => {
-    const button = card.querySelector("button");
-
-    if (!button) return;
-
-    button.addEventListener("click", () => {
-      if (button.classList.contains("is-added")) return;
-
-      button.classList.add("is-added");
-
-      setTimeout(() => {
-        button.classList.remove("is-added");
-      }, 1200);
-    });
-  });
+  // Add-to-cart visual feedback is now handled centrally by cart.js
+  // (it toggles the same .is-added class this page's CSS already styles).
 
   // INITIAL STATE
 
