@@ -1,14 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>About Us - BRIGHT-COLLECTIONS</title>
-  <link rel="stylesheet" href="./bright.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="About BRIGHT-COLLECTIONS — premium footwear, men's fashion wear and luxury wristwatches for the modern gentleman.">
+  <meta name="theme-color" content="#000000">
+
+  <title>About Us | BRIGHT-COLLECTIONS</title>
+
+  <link rel="icon" href="../pictures/bright collection logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../bright.css">
 </head>
+
 <body>
-  <header><h2>About BRIGHT-COLLECTIONS</h2></header>
-  <main>
-    <p>We are dedicated to providing stylish footwears, elegant male wears, and timeless wristwatches at affordable prices.</p>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <a href="../index.html" class="logo-area" aria-label="BRIGHT-COLLECTIONS home">
+      <img src="../pictures/bright collection logo.png" alt="Bright Collections Logo" class="logo">
+      <h2>BRIGHT-COLLECTIONS</h2>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="primary-nav">
+      <a href="../index.html">Home</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./cart.html">Cart 🛒 <span id="cart-count">0</span></a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+
+    <form class="search-box" role="search">
+      <label for="site-search" class="visually-hidden">Search products</label>
+      <input type="search" id="site-search" placeholder="Search products...">
+      <button type="submit">Search</button>
+    </form>
+
+  </header>
+
+
+  <main id="main-content">
+
+    <section class="about-page">
+
+      <h1>About BRIGHT-COLLECTIONS</h1>
+
+      <p class="about-intro">
+        BRIGHT-COLLECTIONS was founded on a simple idea: modern gentlemen
+        deserve premium footwear, fashion wear, and timepieces without the
+        markup of traditional luxury retail. Every piece in our catalog is
+        carefully selected for quality, craftsmanship, and lasting style.
+      </p>
+
+      <div class="about-grid">
+
+        <div class="about-block">
+          <h2>Our Mission</h2>
+          <p>
+            To make premium menswear accessible — pairing quality
+            materials and timeless design with prices that make sense.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h2>What We Offer</h2>
+          <p>
+            Footwear, tailored wear, and luxury wristwatches, each
+            selected to complement the modern gentleman's wardrobe.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h2>Why Shop With Us</h2>
+          <p>
+            Every order is handled personally, with direct WhatsApp
+            support from browsing to checkout.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="about-cta">
+        <p>Ready to upgrade your style?</p>
+        <a href="./shop.html" class="btn">Shop Now</a>
+      </div>
+
+    </section>
+
   </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div>
+      <h3>BRIGHT-COLLECTIONS</h3>
+      <p>Quality Fashion | Affordable Luxury</p>
+    </div>
+
+    <div>
+      <p>Follow us on social media</p>
+      <p>Instagram | TikTok | Facebook</p>
+    </div>
+
+    <p>&copy; 2026 BRIGHT-COLLECTIONS. All Rights Reserved.</p>
+
+  </footer>
+
+  <script src="../otherJavascript/products.js" defer></script>
+  <script src="../otherJavascript/search.js" defer></script>
+  <script src="../otherJavascript/cart.js" defer></script>
+  <script src="../bright.js" defer></script>
+
 </body>
+
 </html>

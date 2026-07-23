@@ -101,6 +101,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add-to-cart visual feedback is now handled centrally by cart.js
   // (it toggles the same .is-added class this page's CSS already styles).
 
+  // SEARCH FILTER (from ?search= param, set by the header search box)
+
+  function applySearchFilter(query) {
+    const lowerQuery = query.toLowerCase();
+
+    cards.forEach(card => {
+      const name = card.querySelector("h3")?.textContent.toLowerCase() || "";
+      card.classList.toggle("is-hidden", !name.includes(lowerQuery));
+    });
+
+    updateResultsCount();
+    revealCards();
+  }
+
+  const searchParams = new URLSearchParams(window.location.search);
+  const searchQuery = searchParams.get("search");
+
+  if (searchQuery) {
+    const searchInput = document.querySelector("#site-search");
+    if (searchInput) searchInput.value = searchQuery;
+    applySearchFilter(searchQuery);
+  }
+
   // INITIAL STATE
 
   updateResultsCount();

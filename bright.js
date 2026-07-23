@@ -60,26 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 4000);
   }
 
-  // SEARCH FUNCTION
-
-  const searchForm = document.querySelector(".search-box");
-  const searchInput = document.querySelector(".search-box input");
-
-  if (searchForm) {
-    searchForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const searchValue = searchInput.value.trim();
-
-      if (searchValue === "") {
-        alert("Please enter a product name");
-      } else {
-        alert("Searching for: " + searchValue);
-        // Later this will connect
-        // to the shop products
-      }
-    });
-  }
+  // Real search functionality now lives in search.js (live suggestions +
+  // redirect to shop.html with results filtered), loaded alongside this file.
 
   // CATEGORY CARD ANIMATION
   // (hover-driven transforms are handled in CSS via .category-card:hover;
